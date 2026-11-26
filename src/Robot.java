@@ -9,7 +9,7 @@ public class Robot {
 
     // Konstruktor:
     public Robot(String name, int height, String color){
-        this.name = name;
+        this.setName(name);
         this.height = height;
         this.color = color;
         this.batteryPower = 100;
@@ -33,11 +33,47 @@ public class Robot {
         this.batteryPower = this.batteryPower - 1;
     }
 
-    public void setBuildYear(int newBuildYear){
-        this.buildYear = newBuildYear;
+    public void setBuildYear(int buildYear){
+        this.buildYear = buildYear;
     }
 
     public int getBuildYear(){
         return buildYear;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public void setName(String name){
+        if (name != null && !name.isEmpty()){
+            this.name = name;
+        }
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+
+    public void setHeight(int height) {
+        if (height > 0){
+            this.height = height;
+        }
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getBatteryPower() {
+        return batteryPower;
+    }
+
+    public void setBatteryPower(int batteryPower) {
+        this.batteryPower = batteryPower;
     }
 }

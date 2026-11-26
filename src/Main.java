@@ -1,8 +1,11 @@
 void main() {
-    Robot myRobot = new Robot("R2D2", 250, "black");
+    Robot myRobot = new Robot("", 100, "black");
     IO.println(myRobot);
     myRobot.setBuildYear(2000);
     IO.println(myRobot.getBuildYear());
+    IO.println("Größe davor: " + myRobot.getHeight());
+    myRobot.setHeight(-10);
+    IO.println("Größe danach: " + myRobot.getHeight());
 
     Robot mySecondRobot = new Robot("C3PO", 180, "green");
     IO.println(mySecondRobot);
